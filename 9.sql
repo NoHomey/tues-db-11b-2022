@@ -49,7 +49,7 @@ WHERE NOT EXISTS (
     SELECT * FROM Drive WHERE Drive.seat = Seat.id
 );
 
--- Fing all Buses that were not drove.
+-- Fing all Buses that were not droven.
 SELECT
     number
 FROM Bus
@@ -69,13 +69,13 @@ WHERE id NOT IN (
     WHERE Seat.bus = Bus.id
 );
 
--- Find all the bus ids of the buses that have been drove.
+-- Find all the bus ids of the buses that have been droven.
 SELECT DISTINCT Seat.bus
 FROM Drive JOIN Seat ON Drive.seat = Seat.id;
 
 -- Example for a Delete statement
-–- DELETE FROM Bus WHERE id = 3;
-–- SELECT * FROM BUS;
+-- DELETE FROM Bus WHERE id = 3;
+-- SELECT * FROM BUS;
 
 -- Find all the Buses whose number starts with 'a' and ends with '2'.
 SELECT *
@@ -98,7 +98,7 @@ FROM Bus
 WHERE number LIKE '%2';
 
 -- Finda all the Buses whose number starts with 'a' or ends with '2' by making a UNION of
--- two queries. UNION is interpret as Set union operation - duplicates are ignored.
+-- two queries. UNION is interpreted as Set union operation - duplicates are ignored.
 SELECT *
 FROM Bus
 WHERE number LIKE 'a%'
